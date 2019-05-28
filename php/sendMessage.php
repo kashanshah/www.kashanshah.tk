@@ -39,11 +39,11 @@ $res = json_decode($server_output);
 if($res->success == true){
     $to = "kashanshah@hotmail.com";
     $subject = "A new contact form submission at www.kashanshah.tk about ".$messageAbout;
-    $message = "A new contact form submission has been recieved on www.kashanshah.tk. Following are the details: <br/>Name: ".$full_name."<br/>Email: ".$email."<br/>Phone: ".$phone."<br/>Message: ".$msg."<br/>";
+    $msg = "A new contact form submission has been recieved on www.kashanshah.tk. Following are the details: <br/>Name: ".$full_name."<br/>Email: ".$email."<br/>Phone: ".$phone."<br/>Message: ".$message."<br/>";
     $headers = "from: do-not-reply@kashanshah.tk\r\n";
     $headers .= "Content-type: text/html\r\n";
 
-    $mail = @mail($to, $subject, $message, $headers);
+    $mail = @mail($to, $subject, $msg, $headers);
     if($mail){
         $response = array(
             "SuccessMessage" => "SuccessMessage"

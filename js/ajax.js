@@ -77,6 +77,7 @@ $(function () {
           response = {};
           $.post('php/sendMessage.php', thisForm.serialize(),function(result) {
             response = JSON.parse(result);
+            grecaptcha.reset();
             append_response();
             thisForm.removeClass("kayo-submiting");
             sendingMessage = false;
