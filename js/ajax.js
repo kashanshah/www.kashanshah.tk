@@ -9,7 +9,8 @@ $(function () {
           "phoneValidation"             : "The Phone Number must be numbers!",
           "messageAboutValidation"      : "Please enter the title of the message",
           "SuccessMessage"              : "Your Message Has Been Sent",
-          "errorMessage"              : "An error occured. Please try again later."
+          "errorMessage"              : "An error occured. Please try again later.",
+          "errorCaptcha"              : "Please verify you're not a robot."
         },
         sendingMessage = false;
     function validateEmail(email) {
@@ -82,7 +83,7 @@ $(function () {
             thisForm.find("[type=submit]").removeAttr("disabled")
           });
         } else {
-          console.log(response)
+          console.log(response);
           append_response();
           thisForm.removeClass("kayo-submiting");
           thisForm.find("[type=submit]").removeAttr("disabled")

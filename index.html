@@ -1422,6 +1422,9 @@
                                     <div class="form-group">
                                         <input type="hidden" data-errorMessage></input>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="g-recaptcha" data-theme="dark" data-sitekey="6Ldly6UUAAAAABF7kSbApZEdYNoCtA33f4nRloRM" data-errorCaptcha></div>
+                                    </div>
                                     <div>
                                         <button class="btn kayo-btn-1 btn-block btn-rgba" type="submit" name="submit_contact_form">
                                             <i class="fa fa-send-o"></i> Send Your Message
@@ -1462,6 +1465,15 @@
 <script src="js/isotope.pkgd.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/ajax.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!--<script src="https://www.google.com/recaptcha/api.js?render=6LfhyqUUAAAAADPRzc1ePtpbqMffywGi5A8B4qLo"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LfhyqUUAAAAADPRzc1ePtpbqMffywGi5A8B4qLo', {action: 'homepage'}).then(function(token) {
+            $("#captchaToken").val(token);
+        });
+    });
+</script>-->
 
 <!-- end the script -->
 </body>
