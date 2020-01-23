@@ -5,6 +5,7 @@ $full_name = "";
 $email = "";
 $phone = "";
 $message = "";
+$subscribe = 0;
 $msg = '';
 ${'g-recaptcha-response'} = '';
 
@@ -39,7 +40,7 @@ $res = json_decode($server_output);
 if($res->success == true){
     $to = "kashanshah@hotmail.com";
     $subject = "A new contact form submission at www.kashanshah.tk about ".$messageAbout;
-    $msg = "A new contact form submission has been recieved on www.kashanshah.tk. Following are the details: <br/>Name: ".$full_name."<br/>Email: ".$email."<br/>Phone: ".$phone."<br/>Message: ".$message."<br/>";
+    $msg = "A new contact form submission has been recieved on www.kashanshah.tk. Following are the details: <br/>Name: ".$full_name."<br/>Email: ".$email."<br/>Phone: ".$phone."<br/>Message: ".$message."<br/>Subscrive to newsletter: ".($subscribe ? 'true' : 'false');
     $headers = "from: do-not-reply@kashanshah.tk\r\n";
     $headers .= "Content-type: text/html\r\n";
 
